@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-//import store from "../stores/index"
+import store from "../stores/index"
 
 
 // authentitification 
@@ -25,20 +25,12 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
 
-  // if (to.path === '/' && !store.state.Utilisateurs.isLoggedIn) {
-  //     // redirect to login page
-  //   console.log("Connection en cours")
-  //     next({ name: 'Login' })
-  //     return
-  // }
-
-  // if logged in redirect to dashboard
-  // if(to.path === '/' && store.state.Utilisateurs.isLoggedIn) {
-  //    next({ name: 'TableauBordGenerale' })
-  //     return
-  // }
-
-  // next()
+  if (to.path === '/' && !store.state.Utilisateurs.isLoggedIn) {
+      // redirect to login page
+    //console.log("Connection en cours")
+      next({ name: 'Login' })
+      return
+  }
 
 
   if(to.path === '/') {

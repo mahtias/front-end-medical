@@ -1,6 +1,7 @@
 
 import Login from '../../views/auth/Login.vue'
 import Logout from '../../views/auth/Logout.vue'
+import users from "../../views/dossierUsers/users.vue"
 
 const AuthRoutes = [
     {
@@ -15,6 +16,11 @@ const AuthRoutes = [
      component: Logout,
      meta: { requiresAuth: true }  
 
+   },
+   {
+     path:"/creation-user",
+     name:"uesr",
+     component:users
    }
    
 ]

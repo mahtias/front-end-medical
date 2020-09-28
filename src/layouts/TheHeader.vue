@@ -4,7 +4,8 @@
         <div class="logo-header" data-background-color="blue">
 
             <a href="index.html" class="logo">
-                <img src="as/assets/img/logo.svg" alt="navbar brand" class="navbar-brand">
+                <!-- <img src="as/assets/img/logo.svg" alt="navbar brand" class="navbar-brand"> -->
+                <p style="color:white;" class="navbar-brand">MISSIONS</p>
             </a>
             <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
@@ -21,97 +22,31 @@
         <!-- End Logo Header -->
         <!-- Navbar Header -->
         <nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
+            <div>
+         <sousMenuMissions v-if="active_el == 10"></sousMenuMissions>
+         <TableauBordGenerale v-if="active_el == 12"></TableauBordGenerale>
+         <sousMenuPersonnel v-if="active_el == 9"></sousMenuPersonnel>
+         <sousMenuBudget v-if="active_el == 13"></sousMenuBudget>
+         
+        <!-- <sousMenuGestionPerimetre v-if="active_el == 13"></sousMenuGestionPerimetre>
+        <sousMenuGestionRessource v-if="active_el == 14"></sousMenuGestionRessource>
+        <sousMenuGestionApprovisionnement v-if="active_el == 15"></sousMenuGestionApprovisionnement>
+        <videNarbarCliquantDemarrer v-if="active_el == 16"></videNarbarCliquantDemarrer>
+        <videNarbarCliquantPanification v-if="active_el == 18"></videNarbarCliquantPanification>
+        <videNarbarCliquantExecution v-if="active_el == 19"></videNarbarCliquantExecution>
+        <videNarbarCliquantMaitrisse v-if="active_el == 20"></videNarbarCliquantMaitrisse> -->
+    </div>
 
             <div class="container-fluid">
-                <div class="collapse" id="search-nav">
-                    <form class="navbar-left navbar-form nav-search mr-md-3">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <button type="submit" class="btn btn-search pr-1">
-                                    <i class="fa fa-search search-icon"></i>
-                                </button>
-                            </div>
-                            <input type="text" placeholder="Search ..." class="form-control">
-                        </div>
-                    </form>
-                </div>
+               
                 <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
                     <li class="nav-item toggle-nav-search hidden-caret">
                         <a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false" aria-controls="search-nav">
                             <i class="fa fa-search"></i>
                         </a>
                     </li>
-                    <li class="nav-item dropdown hidden-caret">
-                        <a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-envelope"></i>
-                        </a>
-                        <ul class="dropdown-menu messages-notif-box animated fadeIn" aria-labelledby="messageDropdown">
-                            <li>
-                                <div class="dropdown-title d-flex justify-content-between align-items-center">
-                                    Messages
-                                    <a href="#" class="small">Mark all as read</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="message-notif-scroll scrollbar-outer">
-                                    <div class="notif-center">
-                                        <a href="#">
-                                            <div class="notif-img">
-                                                <img src="as/assets/img/jm_denis.jpg" alt="Img Profile">
-                                            </div>
-                                            <div class="notif-content">
-                                                <span class="subject">Jimmy Denis</span>
-                                                <span class="block">
-														How are you ?
-													</span>
-                                                <span class="time">5 minutes ago</span>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="notif-img">
-                                                <img src="as/assets/img/chadengle.jpg" alt="Img Profile">
-                                            </div>
-                                            <div class="notif-content">
-                                                <span class="subject">Chad</span>
-                                                <span class="block">
-														Ok, Thanks !
-													</span>
-                                                <span class="time">12 minutes ago</span>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="notif-img">
-                                                <img src="as/assets/img/mlane.jpg" alt="Img Profile">
-                                            </div>
-                                            <div class="notif-content">
-                                                <span class="subject">Jhon Doe</span>
-                                                <span class="block">
-														Ready for the meeting today...
-													</span>
-                                                <span class="time">12 minutes ago</span>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="notif-img">
-                                                <img src="as/assets/img/talha.jpg" alt="Img Profile">
-                                            </div>
-                                            <div class="notif-content">
-                                                <span class="subject">Talha</span>
-                                                <span class="block">
-														Hi, Apa Kabar ?
-													</span>
-                                                <span class="time">17 minutes ago</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="see-all" href="javascript:void(0);">See all messages<i class="fa fa-angle-right"></i> </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown hidden-caret">
+                  
+                    <!-- <li class="nav-item dropdown hidden-caret">
                         <a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-bell"></i>
                             <span class="notification">4</span>
@@ -168,38 +103,36 @@
                                 <a class="see-all" href="javascript:void(0);">See all notifications<i class="fa fa-angle-right"></i> </a>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li class="nav-item dropdown hidden-caret">
                         <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
-                            <i class="fas fa-layer-group"></i>
+                            <i class="fas fa-layer-group" title="parametrage"></i>
                         </a>
                         <div class="dropdown-menu quick-actions quick-actions-info animated fadeIn">
-                            <div class="quick-actions-header">
-                                <span class="title mb-1">Quick Actions</span>
-                                <span class="subtitle op-8">Shortcuts</span>
-                            </div>
+
+                             
                             <div class="quick-actions-scroll scrollbar-outer">
                                 <div class="quick-actions-items">
                                     <div class="row m-0">
-                                        <a class="col-6 col-md-4 p-0" href="#">
+                                        <router-link :to="{name:'uesr'}" class="col-6 col-md-4 p-0" href="#">
                                             <div class="quick-actions-item">
-                                                <i class="flaticon-file-1"></i>
-                                                <span class="text">Generated Report</span>
+                                                <i class="flaticon-user"></i>
+                                                <span class="text">USERS</span>
                                             </div>
-                                        </a>
-                                        <a class="col-6 col-md-4 p-0" href="#">
+                                        </router-link>
+                                        <!-- <a class="col-6 col-md-4 p-0" href="#">
                                             <div class="quick-actions-item">
-                                                <i class="flaticon-database"></i>
-                                                <span class="text">Create New Database</span>
+                                                <i class="flaticon-alarm"></i>
+                                                <span class="text">AFFECTATIONS</span>
                                             </div>
-                                        </a>
-                                        <a class="col-6 col-md-4 p-0" href="#">
+                                        </a> -->
+                                         <router-link :to="{name:'parametre'}" tag="a" class="col-6 col-md-4 p-0" href="#">
                                             <div class="quick-actions-item">
-                                                <i class="flaticon-pen"></i>
-                                                <span class="text">Create New Post</span>
+                                                <i class="flaticon-settings"></i>
+                                                <span class="text">PARAMETRE</span>
                                             </div>
-                                        </a>
-                                        <a class="col-6 col-md-4 p-0" href="#">
+                                         </router-link>
+                                        <!-- <a class="col-6 col-md-4 p-0" href="#">
                                             <div class="quick-actions-item">
                                                 <i class="flaticon-interface-1"></i>
                                                 <span class="text">Create New Task</span>
@@ -216,42 +149,13 @@
                                                 <i class="flaticon-file"></i>
                                                 <span class="text">Create New Invoice</span>
                                             </div>
-                                        </a>
+                                        </a> -->
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item dropdown hidden-caret">
-                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
-                            <div class="avatar-sm">
-                                <img src="as/assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu dropdown-user animated fadeIn">
-                            <div class="dropdown-user-scroll scrollbar-outer">
-                                <li>
-                                    <div class="user-box">
-                                        <div class="avatar-lg"><img src="as/assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
-                                        <div class="u-text">
-                                            <h4>Hizrian</h4>
-                                            <p class="text-muted">hello@example.com</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">My Profile</a>
-                                    <a class="dropdown-item" href="#">My Balance</a>
-                                    <a class="dropdown-item" href="#">Inbox</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Account Setting</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" @click.prevent="logoutUser()" href="#">Logout</a>
-                                </li>
-                            </div>
-                        </ul>
-                    </li>
+                  
                 </ul>
             </div>
         </nav>
@@ -260,12 +164,56 @@
 </template>
 
 <script>
-    import {  mapActions } from "vuex";
+   import { mapState, mapActions} from "vuex";
+   import sousMenuMissions from "../components/navs/sousMenuMissions"
+   import TableauBordGenerale from "../views/dashbord/TableauBordGenerale"
+   import sousMenuPersonnel from "../components/navs/sousMenuPersonnel"
+   import sousMenuBudget from "../components/navs/sousMenuBudget"
     export default {
+        components:{
+            sousMenuMissions,
+            TableauBordGenerale,
+            sousMenuPersonnel,
+            sousMenuBudget
+        },
         name: "TheSideBar",
+        computed:{
+               ...mapState('MenuPara', {
+     active_el: state => state.active_el
+  }),
+        },
+
+        created(){
+        this.getUser()
+       this.getCategorie()
+       this.getFonction()
+       this.getHotel()
+       this.getCarburant()
+       this.getModePaiement()
+       this.getmoyenTransport()
+       this.getTypeMission()
+       this.getAnneeMission()
+       this.getNormeMission()
+       this.getPersonnel()
+       this.getSituationMatrimoniale()
+       this.getRole()
+       this.getUserRole()
+       this.getActivite()
+       this.getPays()
+       this.getPlan_pays()
+       this.getPlanActivite()
+       this.getBudget()
+       this.getMission()
+       
+
+        },
+
         methods: {
 
-            ...mapActions('Utilisateurs', ['logoutUser']),
+            ...mapActions('Utilisateurs', ['logoutUser','getUser','getCategorie','getFonction','getHotel','getCarburant',
+            'getmoyenTransport', 'getTypeMission','getAnneeMission','getNormeMission','getModePaiement',
+            'getPersonnel','getSituationMatrimoniale', 'getRole'
+            ,'getUserRole','getActivite','getPays','getPlan_pays','getPlanActivite', 'getBudget','getMission']),
         }
     }
 </script>
