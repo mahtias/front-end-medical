@@ -19,9 +19,9 @@
 										width="520"
 										:mask-closable="false"
 										:styles="styles"
-
-			
 									>
+
+									
 									<div class="form-group">
 										<label>Plan d'activité</label>
 										<select  v-model="formData.activite_id" class="form-control form-control-sm" >
