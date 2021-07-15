@@ -20,7 +20,7 @@
 										:mask-closable="false"
 										:styles="styles"
 
-								
+			
 									>
 									<div class="form-group">
 										<label>Plan d'activité</label>
