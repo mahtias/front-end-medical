@@ -28,13 +28,13 @@ router.beforeEach((to, from, next) => {
   if (to.path === '/' && !store.state.Utilisateurs.isLoggedIn) {
       // redirect to login page
     //console.log("Connection en cours")
-      next({ name: 'Login' })
+      next({ name: 'TableauBordGenerale' })
       return
   }
 
 
   if(to.path === '/') {
-    next({ name: 'TableauBordGenerale' })
+    next({ name: 'Login' })
      return
  }
 

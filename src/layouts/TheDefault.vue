@@ -15,7 +15,7 @@
                 <div class="container-fluid">
                    
                     <div class="copyright pull-left">
-                     copyright   2020, tous  droit reservé    par <a href="https://www.themekita.com">AKouaTechnology</a>
+                     copyright   2024 <a href="https://www.themekita.com">AKouaTechnology</a>
                     </div>
                 </div>
             </footer>

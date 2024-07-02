@@ -5,7 +5,7 @@
 
             <a href="index.html" class="logo">
                 <!-- <img src="as/assets/img/logo.svg" alt="navbar brand" class="navbar-brand"> -->
-                <p style="color:white;" class="navbar-brand">MISSIONS</p>
+                <p style="color:white;" class="navbar-brand">SMED-INFSB</p>
             </a>
             <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
@@ -112,7 +112,7 @@
 
                              
                             <div class="quick-actions-scroll scrollbar-outer">
-                                <div class="quick-actions-items">
+                                <div class="quick-actions-items"> 
                                     <div class="row m-0">
                                         <router-link :to="{name:'uesr'}" class="col-6 col-md-4 p-0" href="#">
                                             <div class="quick-actions-item">

@@ -11,8 +11,8 @@
                         <div class="info">
                             <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
-								<span style="text-align:center;color:orange;">{{afficherNameuser}}</span>
-										<span class="user-level" style="text-align:center;font-size:14px">{{afficherRoleUser}}</span>
+								<span style="text-align:center;color:orange;"></span>
+										<span class="user-level" style="text-align:center;font-size:14px"></span>
 									<span class="caret"></span>
 								</span>
                             </a>
@@ -44,28 +44,28 @@
                         <li class="nav-item active" :class="{active: active_el == 11 }" @click.prevent="TableauBordGenerale">
          <router-link :to="{name:''}">
           <i class="fas fa-tachometer-alt"></i>
-            <p>TABLEAU DE BORD</p>
+            <p>DASHBORD</p>
          </router-link>
 
        </li>
        <li class="nav-item" :class="{active: active_el == 13 }" @click.prevent="sousMenuBudget">
          <router-link :to="{name:''}">
           <i class="fas fa-home"></i>
-            <p> BUDGET</p>
+            <p> DOCTOR</p>
          </router-link>
 
        </li>             
             <li class="nav-item" :class="{active: active_el == 10 }" @click.prevent="sousMenuMissions">
          <router-link :to="{name:''}">
           <i class="fas fa-user-tie"></i>
-            <p>PERSONNELS</p>
+            <p>PATIENT</p>
          </router-link>
 
        </li>
                        <li class="nav-item" :class="{active: active_el == 9 }" @click.prevent="sousMenuPersonnel">
          <router-link :to="{name:''}">
           <i class="fas fa-home"></i>
-            <p> MISSIONS</p>
+            <p> Setting</p>
          </router-link>
 
        </li>
@@ -102,16 +102,16 @@ import {admin, user} from "../repositories/Auth"
              ...mapState('MenuPara', {
     active_el: state => state.active_el
 }), 
-afficherNameuser(){
-  let objetName = localStorage.getItem('Users');
-  let objetJson = JSON.parse(objetName);
-  return objetJson.name
-},
-afficherRoleUser(){
-  let objet = localStorage.getItem('Users');
-  let objetJson = JSON.parse(objet);
-  return objetJson.user_role.role.libelle
-}, 
+// afficherNameuser(){
+//   let objetName = localStorage.getItem('Users');
+//   let objetJson = JSON.parse(objetName);
+//   return objetJson.name
+// },
+// afficherRoleUser(){
+//   let objet = localStorage.getItem('Users');
+//   let objetJson = JSON.parse(objet);
+//   return objetJson.user_role.role.libelle
+// }, 
         },
         methods:{
             ...mapMutations('MenuPara', ['activate']),
